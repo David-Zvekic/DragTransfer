@@ -3,7 +3,7 @@ A module for Foundry VTT
 
 Enable moving (rather than cloning) inventory between actors by dragging and dropping.
 
-This tool is mostely useful for GM who want to easily be able to distribute items between character sheets - without accidentally duplicating items.  Or possibly players transfering items from dead companions.
+This tool is for GM who want to move items between character sheets, without duplicating them. 
 
 Standard Foundry VTT behavior clones items when they are dragged and dropped from 1 actor-sheet to another. If you prefer the item to not be duplicated, this module might be what you are looking for: **Drag'n'Transfer**  causes the item to be deleted from the original sheet when it is dropped onto another actor sheet.
 
