@@ -7,7 +7,7 @@ This tool is for GM who want to move items between character sheets, without dup
 
 Standard Foundry VTT behavior clones items when they are dragged and dropped from 1 actor-sheet to another. If you prefer the item to not be duplicated, this module might be what you are looking for: **Drag'n'Transfer**  causes the item to be deleted from the original sheet when it is dropped onto another actor sheet.
 
-I've tested it with DND5e and alienrpg Systems.  **Drag'n'Transfer** depends on items being recorded using certain JSON values. (In the future I may make this JSON configurable if people send requests). Please tell me if you get it to work on other systems. I didn't specifically target any particular systems, but those are the 2 that I play, so I noticed that it works on both.
+I've tested it with DND5e and alienrpg Systems.  **Drag'n'Transfer** depends on items being recorded using certain JSON values. (In the future I may make this JSON configurable if people send requests). Please tell me if you get it to work on other systems. I didn't specifically target any particular systems, but those are the 2 that I play, so I've tested it with both.
 
 It is important for GM's to test this module in their world because Drag'n'Transfer **assumes** that the item will be cloned onto the destination.  Drag'n'Transfer hooks on the drop action, and doesnt know if another module ALSO hooks onto the drop action and changes the destiny of that dropped item.  For example: if another module canceled the cloning, preventing the item from being cloned, Drag'n'Transfer would not know and would still delete the item from the original actor sheet.
 
