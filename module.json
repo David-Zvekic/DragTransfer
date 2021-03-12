@@ -1,0 +1,12 @@
+{
+  "name": "DragTransfer",
+  "title": "Drag'n'Transfer",
+  "description": "Transfer (rather than clone) items between actors by drag and drop.",
+  "author": "David Zvekic",
+  "version": "1.0.0",
+  "compatibleCoreVersion": "0.7.9",
+  "url":"https://github.com/David-Zvekic/DragTransfer",
+  "manifest": "https://github.com/David-Zvekic/DragTransfer/releases/download/master/module.json",
+  "download": "https://github.com/David-Zvekic/DragTransfer/releases/download/master/module.zip",
+  "scripts": ["DragTransfer.js"]
+}
