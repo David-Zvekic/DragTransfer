@@ -13,7 +13,7 @@ It is important for GM's to test this module in their world because Drag'n'Trans
 
 **Limitation :**  To prevent deletion of items when they are dropped onto sheets that lack a compatable inventory section, this module will only respond when both the source and target of the drag and drop are both of the same "type".  If you are playing a system that gives all actors the same "type", even when they aren't compatable, then this safety check wont work and you must take responsibility to ensure you dont drop items onto target sheets that lack the ability to display the same items as the source. 
 
-**PRO TIP**: If players want to leave things in a room somewhere, you can create an Actor-sheet with a token that looks like a box, and then drag'n'drop inventory into that actor-sheet, and just leave the token of that actor on the map.  Their items will be recorded inside the actor and need not clutter up your item sidebar.
+**PRO TIP**: If players want to leave things in a room somewhere, you can create an Actor-sheet with a token that looks like a box or container, and then Drag'n'Transfer inventory into it's character sheet. Just leave the token of that actor on the map, and items players want to leave in that room can be recorded inside that actor and need not clutter up your sidebar.
 
 **Future Plans:** If I can create a generic "Inventory Actory" that is system agnostic and serves as an actor with a token which items can be dragged and dropped from.  Such an actor would be cleaner than using a full blown character sheet, and if players had ownership rights over it, then they could access storage lockers placed on a map without the GM needing to move inventory for them.
 
