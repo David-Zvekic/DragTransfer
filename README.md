@@ -18,7 +18,7 @@ It is important for GM's to test this module in their world because Drag'n'Trans
 
 If you are playing a system that gives incompatable actors the same "type", then this safety check wont work and you must take responsibility to ensure you dont drop items onto target sheets that lack the ability to display the same items as the source.  This module will delete the original copy, and you may have no way to access the resulting copy made in the destination actor JSON.
 
-In Drag'm'Transfer module settings, the GM can now explicitly specify that certain actor types are compatable with the "Compatable Actor Types" setting. For instance in dnd5e, its possible for both "character" and "npc" types to transfer inventory.  To specify compatable types, use a coma separated list of quoted string pairs separated by a colon character.  For instance :   "character":"npc"
+In Drag'n'Transfer module settings, the GM can now explicitly specify that certain actor types are compatable with the "Compatable Actor Types" setting. For instance in dnd5e, its possible for both "character" and "npc" types to transfer inventory.  To specify compatable types, use a coma separated list of quoted string pairs separated by a colon character.  For instance :   "character":"npc"
 
 **PRO TIP**: If players want to leave things in a room somewhere, you can create an Actor-sheet with a token that looks like a box or container, and then Drag'n'Transfer inventory into it's character sheet. Just leave the token of that actor on the map, and items players want to leave in that room can be recorded inside that actor and need not clutter up your sidebar.
 
