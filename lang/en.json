@@ -1,5 +1,5 @@
 {
 	"DRAGTANSFER.actorTransferPairs" : "Compatible Actor Types:",
-    "DRAGTANSFER.actorTransferPairsHint" : "A coma separated list of compatible actor type pairs allowing Drag'n'Transfer. By default this module only works between actor sheets of the same type, but some game systems may have other combinations that work.  Example   :   \"character\":\"npc\",\"type1\":\"type2\" "
+    "DRAGTANSFER.actorTransferPairsHint" : "The body of a JSON map of compatible actor type key-value pairs allowing Drag'n'Transfer. By default this module only works between actor sheets of the same type, but some game systems may have other combinations that work. Example  :   \"character\":\"synthetic\",\"synthetic\":\"vehicles\",\"vehicles\":\"character\"    "
 
 }

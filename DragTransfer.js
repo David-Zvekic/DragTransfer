@@ -16,14 +16,16 @@ Hooks.once('init',()=>{
 });
 
 
-Hooks.on('dropActorSheetData',(target,sheet,dragSource,user)=>{
+Hooks.on('dropActorSheetData',(dragTarget,sheet,dragSource,user)=>{
  
   if(dragSource.type=="Item" && dragSource.actorId) {
-	if(!target.data._id) {
-		console.warn("Drag'n'Trasfer - target has no data._id?",target);
+	
+	  
+	if(!dragTarget.data._id) {
+		console.warn("Drag'n'Transfer - target has no data._id?",dragTarget);
 		return; 
 	}
-	if(target.data._id ==  dragSource.actorId) return;  // ignore dropping on self
+	if(dragTarget.data._id ==  dragSource.actorId) return;  // ignore dropping on self
       let sourceActor = game.actors.get(dragSource.actorId);
       if(sourceActor) {
 	 	// if both source and target have the same type then allow deleting original item.
@@ -33,12 +35,14 @@ Hooks.on('dropActorSheetData',(target,sheet,dragSource,user)=>{
 				    
 		
 		  function checkCompatable(a,b){
+			  console.info('DragNTransfer - Check Compatability: Dragging Item:"' + String(dragSource.data.type) + '" from sourceActor.data.type:"' +String(a) +'" to dragTarget.data.type:"'+String(b)+'".');
 			  if(a==b) return true;
 			  try {
 				 
      			  const transferPairs = JSON.parse("{"+ game.settings.get('DragTransfer', 'actorTransferPairs') +"}");
-	              if(transferPairs["a"]=b) return true;
-			      if(transferPairs["b"]=a) return true;
+				
+	              if(transferPairs[a]==b) return true;
+			      if(transferPairs[b]==a) return true;
 				  
 			  }
 	          catch(err){
@@ -47,9 +51,15 @@ Hooks.on('dropActorSheetData',(target,sheet,dragSource,user)=>{
 	  	      }
    		      return false;
 		  };
-		  
-		if ( checkCompatable(sourceActor.data.type,target.data.type) )
-	      sourceActor.deleteOwnedItem( dragSource.data._id);
+	
+		if ( checkCompatable(sourceActor.data.type,dragTarget.data.type) ) {
+			if(sourceActor.deleteEmbeddedDocuments!=undefined) {
+			   sourceActor.deleteEmbeddedDocuments( "Item",[dragSource.data._id]);
+		    } else 
+			{
+		       sourceActor.deleteOwnedItem( dragSource.data._id);
+            }
+	    }
 	  }
     }
 });

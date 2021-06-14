@@ -1,4 +1,4 @@
-# Drag'n'Transfer v 1.1.0
+# Drag'n'Transfer v 1.1.2
 A module for Foundry VTT 
 
 Enable moving (rather than cloning) inventory between actors by dragging and dropping.
@@ -24,3 +24,5 @@ In Drag'n'Transfer module settings, the GM can now explicitly specify that certa
 
 **Future Plans:** If I can create a generic "Inventory Actory" that is system agnostic and serves as an actor with a token which items can be dragged and dropped from.  Such an actor would be cleaner than using a full blown character sheet, and if players had ownership rights over it, then they could access storage lockers placed on a map without the GM needing to move inventory for them.
 
+**History:**
+1.1.2: Bug fixes
