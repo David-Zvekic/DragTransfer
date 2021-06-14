@@ -1,14 +1,14 @@
 {
   "name": "DragTransfer",
   "title": "Drag'n'Transfer",
-  "description": "Transfer (rather than clone) items between actors by drag and drop.",
+  "description": "Move (rather than copy) items drag-and-dropped between character sheets.",
   "author": "David Zvekic",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "compatibleCoreVersion": "0.8.6",
   "minimumCoreVersion": "0.7.9",
   "url":"https://github.com/David-Zvekic/DragTransfer",
-  "manifest": "https://github.com/David-Zvekic/DragTransfer/releases/download/v1.1.2/module.json",
-  "download": "https://github.com/David-Zvekic/DragTransfer/releases/download/v1.1.2/DragTransfer.zip",
+  "manifest": "https://github.com/David-Zvekic/DragTransfer/releases/download/v1.2.0/module.json",
+  "download": "https://github.com/David-Zvekic/DragTransfer/releases/download/v1.2.0/DragTransfer.zip",
   "esmodules": ["DragTransfer.js"],
   "languages": [
     {

@@ -16,8 +16,27 @@ Hooks.once('init',()=>{
 });
 
 
+
+function isSuperset(set, subset) {
+    for (let elem of subset) {
+        if (!set.has(elem)) {
+            return false
+        }
+    }
+    return true
+}
+
 Hooks.on('dropActorSheetData',(dragTarget,sheet,dragSource,user)=>{
- 
+
+  function isAlt(){
+     // check if Alt and only Alt is being pressed during the drop event.
+     const alt = new Set(["Alt"]);
+     return (isSuperset(alt,game.keyboard._downKeys) && isSuperset(game.keyboard._downKeys,alt));
+  }
+	
+  if (isAlt()) return;  // ignore Drag'N'Transfer when Alt is pressed to drop.
+	
+	
   if(dragSource.type=="Item" && dragSource.actorId) {
 	
 	  
