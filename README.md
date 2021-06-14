@@ -20,8 +20,15 @@ It is important for GM's to test this module in their world because Drag'n'Trans
 3. In Drag'n'Transfer module settings, the GM can now explicitly specify that certain actor types are compatable with the "Compatable Actor Types" setting. For instance in dnd5e, its possible for both "character" and "npc" types to transfer items, so the GM may want to drag items between NPCs and Characters.  To specify compatable types, use a coma separated list of JSON key-value pairs separated by a colon character.  It is necessary that each key only exists once.  To specify equivalences between more than 2 types, you must define it as a circular key-value list such as "A":"B", "B":"C","C":"A".  If you include a list such as "A":"B", "A":"C" (where the "A" key appears multiple times) then some of the keys will be ignored.  In a future I'll come up with something less rigid.
 
 Examples I use:
-    for dnd5e :   "character":"npc".
-    For alienrpg :  "character":"synthetic","synthetic":"vehicles","vehicles":"character" (note that as of alienrpg 2.0.0 the actor sheet for "vehicles" only support weapons and are not compatible otherwise (see Limitations), so this isn't a bug in Drag'N'Transfer if a Motion Tracker transferred to a vehicle vanishes ).
+
+a) For dnd5e
+
+    "character":"npc".
+b) for alienrpg
+
+    "character":"synthetic","synthetic":"vehicles","vehicles":"character"
+    
+(note that up to alienrpg 2.0.0 the actor sheet for "vehicles" only support weapons and are not compatible otherwise so this isn't a bug in Drag'N'Transfer if a Motion Tracker transferred to a vehicle vanishes (see Limitations).
 
 
 **Limitations :**  
@@ -36,6 +43,7 @@ If you are playing a system that gives incompatable actors the same "type", then
 **Future Plans:** If I can create a generic "Inventory Actory" that is system agnostic and serves as an actor with a token which items can be dragged and dropped from.  Such an actor would be cleaner than using a full blown character sheet, and if players had ownership rights over it, then they could access storage lockers placed on a map without the GM needing to move inventory for them.
 
 **History:**
+
 1.2.0: Pressing ALT during an item drag will let the item be cloned as per standard FoundryVTT behavior.
 
 1.1.2: Bug fixes
