@@ -1,4 +1,4 @@
-# Drag'n'Transfer v 1.2.0
+# Drag'n'Transfer v 1.2.1
 A module for Foundry VTT 
 
 Enable moving (rather than cloning) inventory between actors by dragging and dropping.
