@@ -1,3 +1,4 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/davidzvekic)
 # Drag'n'Transfer v 1.2.1
 A module for Foundry VTT 
 
