@@ -31,7 +31,7 @@ Hooks.on('dropActorSheetData',(dragTarget,sheet,dragSource,user)=>{
   function isAlt(){
      // check if Alt and only Alt is being pressed during the drop event.
      const alts = new Set(["Alt", "AltLeft"]);
-     return (game.keyboard.downKeys.length == 1 && game.keyboard.downKeys.intersects(alts));
+     return (game.keyboard.downKeys.size == 1 && game.keyboard.downKeys.intersects(alts));
   }
 	
   if (isAlt()) return;  // ignore Drag'N'Transfer when Alt is pressed to drop.
