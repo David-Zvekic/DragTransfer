@@ -1,5 +1,5 @@
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/davidzvekic)
-# Drag'n'Transfer v 1.2.1
+# Drag'n'Transfer v 1.3.0
 A module for Foundry VTT 
 
 Enable moving (rather than cloning) inventory between actors by dragging and dropping.
