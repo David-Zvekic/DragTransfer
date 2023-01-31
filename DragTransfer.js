@@ -55,8 +55,9 @@ Hooks.on('dropActorSheetData', (dragTarget, sheet, dragSource, user) => {
             console.warn("Drag'n'Transfer - target has no data._id?", dragTarget);
             return;
         }
-        if (dragTarget.data._id == dragSource.uuid) return; // ignore dropping on self
         let sourceActor = fromUuidSync(dragSource.uuid).actor;
+        let targetActor = fromUuidSync(dragTarget.uuid);
+        if (sourceActor.id == targetActor.id) return; // ignore dropping on self
         if (sourceActor) {
             // if both source and target have the same type then allow deleting original item.
             // this is a safety check because some game systems may allow dropping on targets
@@ -81,11 +82,11 @@ Hooks.on('dropActorSheetData', (dragTarget, sheet, dragSource, user) => {
                 return false;
             };
 
-            if (checkCompatable(sourceActor.data.type, dragTarget.data.type)) {
+            if (checkCompatable(sourceActor.type, dragTarget.type)) {
                 if (sourceActor.deleteEmbeddedDocuments != undefined) {
                     sourceActor.deleteEmbeddedDocuments("Item", [fromUuidSync(dragSource.uuid).id]);
                 } else {
-                    sourceActor.deleteOwnedItem(dragSource.data._id);
+                    sourceActor.deleteOwnedItem(dragSource.id);
                 }
             }
         }
